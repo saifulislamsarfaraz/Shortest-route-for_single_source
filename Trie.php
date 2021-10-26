@@ -14,7 +14,7 @@
     <header>
         <div class="container">
        
-        <h1 class="top">CSE 246 - Project</h1>
+        <h1 class="top"></h1>
             <h2>Find shortest path your destination</h2>
         </div>
     </header>
@@ -35,6 +35,7 @@
     <script src="TrieScript.js"></script>
     <script src="triedataRead.js"></script>
     <script src="mapScript.js"></script>
+    
 
 </body>
 

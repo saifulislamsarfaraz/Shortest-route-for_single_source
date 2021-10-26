@@ -36,19 +36,39 @@
         border-radius: 0px;
         background-color: black;
     }
+    .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+   }
+    .btn1:hover.tooltiptext {
+    visibility: visible;
+   }
     .visit{
         background: url(File/map.png);
         background-size: 100%;
-        transition: all 0.1s ease-in;
+        transition: all 0.000009s ease-in;
         filter: contrast(200%);
+        background-color: green;
     }
 
     .visit_previous{
         background: url(File/map.png);
         background-size: cover;
-        transition: all 0.2s ease-in;
-        filter: brightness(20%);
-        filter: invert(100%);
+        transition: all 0.02s ease-in;
+        filter: brightness(100%);
+        background-color: yellow;
     }
 
     .header{
@@ -58,7 +78,7 @@
     }
 </style>
 
-
+<span class="tooltiptext">Click Button</span>
 <div class="header">
     <?php 
     function set_home($x,$y,$home){
@@ -98,7 +118,7 @@
     }
     ?>
 <?php
-$n = 49;
+
     for($i=0; $i<50; $i++){
         for($j=0; $j<50; $j++){
         $home[$i][$j]=0;
@@ -109,11 +129,11 @@ $n = 49;
     }
     $home = set_home(5,7,$home);
 
-    $market_vertext_x = array(5,5,5,5,11,18,18,18,18,4,11,18,11);
-    $market_vertext_y = array(7,19,31,42,25,7,19,31,42,25,4,25,42);
+    $market_vertext_x = array(5,5,5,5,11,18,18,18,18,4,11,18,11,25,25,25,25,25,25,35,33,35,34,35,34,42,43,42,42,41,42);
+    $market_vertext_y = array(7,19,31,42,25,7,19,31,42,25,4,25,42,7,19,13,30,36,42,6,13,20,30,36,42,7,14,20,30,36,42);
 
     
-    for($i = 0; $i < 13; $i++){
+    for($i = 0; $i < 31; $i++){
         $x = $market_vertext_x[$i];
         $y = $market_vertext_y[$i];
         $market = set_home($x,$y,$market);
@@ -126,12 +146,38 @@ $road=set_road(15,1,'v_l',46,$road);
 $road=set_road(1,1,'v_l',46,$road);
 $road=set_road(21,1,'v_l',46,$road);
 $road=set_road(47,1,'v_l',46,$road);
+$road=set_road(30,1,'v_l',46,$road);
+$road=set_road(38,1,'v_l',46,$road);
+$road=set_road(25,1,'v_l',5,$road);
+$road=set_road(25,19,'v_l',5,$road);
+$road=set_road(35,1,'v_l',5,$road);
+$road=set_road(35,20,'v_l',5,$road);
+$road=set_road(42,1,'v_l',5,$road);
+$road=set_road(42,20,'v_l',5,$road);
+
+
 
 $road=set_road(1,1,'v_u',46,$road);
 $road=set_road(1,47,'v_u',46,$road);
 $road=set_road(1,37,'v_u',7,$road);
 $road=set_road(1,13,'v_u',7,$road);
 $road=set_road(22,25,'v_u',24,$road);
+$road=set_road(27,13,'v_u',3,$road);
+$road=set_road(30,6,'v_u',5,$road);
+$road=set_road(30,13,'v_u',1,$road);
+$road=set_road(35,20,'v_u',2,$road);
+$road=set_road(38,7,'v_u',3,$road);
+$road=set_road(38,14,'v_u',3,$road);
+$road=set_road(38,20,'v_u',3,$road);
+$road=set_road(38,30,'v_u',3,$road);
+$road=set_road(38,36,'v_u',2,$road);
+$road=set_road(38,42,'v_u',3,$road);
+$road=set_road(30,30,'v_u',3,$road);
+$road=set_road(30,36,'v_u',3,$road);
+$road=set_road(30,42,'v_u',3,$road);
+$road=set_road(21,30,'v_u',3,$road);
+$road=set_road(25,36,'v_u',5,$road);
+$road=set_road(21,42,'v_u',3,$road);
 
 
 $road=set_road(8,34,'v_u',7,$road);
@@ -159,7 +205,10 @@ $road=set_road(5,9,'v_l',3,$road);
 $road=set_road(5,7,'v_u',2,$road);
 $road=set_road(2,25,'v_u',1,$road);
 $road=set_road(9,4,'v_u',1,$road);
+
 $road=set_road(19,25,'v_u',1,$road);
+$road=set_road(27,19,'v_u',2,$road);
+$road=set_road(21,7,'v_u',3,$road);
 
 $road=set_road(9,42,'v_u',1,$road);
 $road=set_road(1,7,'v_u',3,$road);
