@@ -1,5 +1,5 @@
 # Shortest-route-for_single_source
-I maked best shortest root finder frin source to destination.This is a simple shortest route find 2d map project with php and javascript.
+I made the best shortest route finder from source to destination. This is a simple shortest route to find 2D map project with PHP and javascript.
 # Language
 - Java Script
 - PHP
